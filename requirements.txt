@@ -1,6 +1,7 @@
-pandas==2.2.2
+matplotlib==3.9.0
 numpy==1.26.4
-streamlit==1.36.0
+pandas==2.2.2
 plotly==5.22.0
 pyarrow==16.1.0
 python-dateutil==2.9.0.post0
+streamlit==1.36.0
