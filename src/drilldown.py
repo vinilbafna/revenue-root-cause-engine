@@ -34,6 +34,13 @@ DIMENSIONS = [
     "payment_type_mode",  # substituted for "payment_type" — see module docstring
 ]
 
+# VALIDATED TRAP CASE (2018-05-21, product_category_name_english):
+# Segments like "agro_industry_and_commerce" and "furniture_living_room"
+# show a full -100% decline (the most extreme possible % change) while
+# representing under 0.5% of baseline revenue. Both are correctly
+# excluded from is_credible_root_cause due to the baseline_share_pct
+# floor — proving the 3% share requirement successfully filters out
+# statistically dramatic but economically insignificant segments.
 BASELINE_SHARE_THRESHOLD = 3.0     # segment must be at least 3% of baseline revenue
 DECLINE_RATIO_THRESHOLD = 1.3      # segment must be dropping >1.3x faster than overall
 
