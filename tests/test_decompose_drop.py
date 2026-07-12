@@ -30,6 +30,10 @@ def test_decompose_revenue_drop_is_exact_and_compounding():
     
     revenue_now = result["revenue_now"]
     revenue_baseline = result["revenue_baseline"]
+    # Ground-truth check: baseline weeks are all order_count=100, avg_order_value=10.0,
+    # so true baseline revenue must be exactly 100 * 10.0 = 1000.0. Catches bugs where
+    # revenue_baseline drifts from genuinely being volume_baseline * aov_baseline.
+    assert revenue_baseline == pytest.approx(1000.0)
     volume_effect = result["volume_effect"]
     aov_effect = result["aov_effect"]
     total_effect = result["total_effect"]
