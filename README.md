@@ -78,12 +78,6 @@ pytest tests/ -v
 streamlit run app/main.py   # adjust path if your entry point differs
 ```
 
-To enable Claude-polished memos locally, create `.streamlit/secrets.toml` (already gitignored) with:
-
-```toml
-ANTHROPIC_API_KEY = "your-key-here"
-```
-
 ## Project Structure
 
 ```
