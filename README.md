@@ -69,13 +69,6 @@ pip install -r requirements-dev.txt   # optional, for running tests
 
 pytest tests/ -v                       # optional
 streamlit run app/app.py
-```
-
-To enable Claude-polished memos locally, create `.streamlit/secrets.toml` (already gitignored):
-
-```toml
-ANTHROPIC_API_KEY = "your-key-here"
-```
 
 ## Project Structure
 
