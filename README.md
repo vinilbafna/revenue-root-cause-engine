@@ -69,6 +69,8 @@ pip install -r requirements-dev.txt   # optional, for running tests
 
 pytest tests/ -v                       # optional
 streamlit run app/app.py
+```
+
 
 ## Project Structure
 
